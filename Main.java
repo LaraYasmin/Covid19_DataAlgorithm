@@ -2,6 +2,8 @@ import java.io.BufferedReader;
 import java.io.FileReader; 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.*;
+import java.util.*;
 
 public class Main {
 
@@ -27,10 +29,16 @@ public class Main {
 		}*/
 
 		readAllLinesFromFile(CSV_PATH);
-    	System.out.println("Unsorted:\n");
+    	/*System.out.println("Unsorted:\n");
     	for(int i = 0; i < aList.length; i++) {
 			System.out.println(aList[i]);
-    	}
+    	}*/
+
+		String aArr[][] = convertToSplited(aList);
+
+		for(int j = 0; j < aArr.length; j++) {
+			System.out.println(Arrays.toString(aArr[j]));
+		}
 	}
 
 	public static String[] readAllLinesFromFile(String path) throws IOException {
@@ -53,5 +61,20 @@ public class Main {
 
 	}
 
-	
+	public static String[][] convertToSplited(String[] arrSplit) {
+    	String [][] splitArr = new String[aList.length][16];
+		int cont = 0;
+    	for(String arrSplits : arrSplit) {
+			if(arrSplits != null) {
+				String[] parts = arrSplits.split(",");
+				for(int i = 0; i < 16; i++) {
+				splitArr[cont][i] = parts[i];
+				}
+				cont++;
+			}
+    	}
+
+    	return splitArr;
+	}
+
 }
