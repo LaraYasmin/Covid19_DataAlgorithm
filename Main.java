@@ -11,11 +11,25 @@ public class Main {
 	public static String aList[] = new String[1];
 
     public static void main(String[] args) throws IOException {
+		/*lê o arquivo de dados*/
 		readAllLinesFromFile(CSV_PATH);
 
+		/* Selection Sort*/
+		// Mortes acumuladas
 		String selectionMortesAcumuladas[][] = convertToSplited(aList);
 		SelectionSort.selectionSortMortesAcumuladas(selectionMortesAcumuladas);
 		writeAllLinesToFile("selectionMortesAcumuladas", selectionMortesAcumuladas);
+		// Quantidade de casos
+		String selectionQuantidadeDeCasos[][] = convertToSplited(aList);
+		SelectionSort.selectionSortQuantidadeDeCasos(selectionQuantidadeDeCasos);
+		writeAllLinesToFile("selectionQuantidadeDeCasos", selectionQuantidadeDeCasos);
+		// Nome de cidades
+		String selectionNomeCidade[][] = convertToSplited(aList);
+		SelectionSort.selectionSortNomeCidade(selectionNomeCidade);
+		writeAllLinesToFile("selectionNomeCidade", selectionNomeCidade);
+
+
+		/* Insertion Sort */
 	}
 
 	/*Lê as linhas do arquivo e armazena em um array */
