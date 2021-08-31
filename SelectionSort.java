@@ -25,6 +25,7 @@ public class SelectionSort {
 	
     }
 
+	/* Ordena com selection sort por casos acumulados*/
 	public static void selectionSortQuantidadeDeCasos(String[][] v) {
 
 		for (int i = 1; i < v.length - 1; i++)  
@@ -49,6 +50,7 @@ public class SelectionSort {
 	
     }
 
+	/* Ordena com selection sort por nomes de cidade */
 	static void selectionSortNomeCidade(String[][] v) {
     	for(int i = 0; i < v.length - 1; i++) {
 

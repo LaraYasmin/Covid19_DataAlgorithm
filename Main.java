@@ -32,6 +32,20 @@ public class Main {
 
 		/* Insertion Sort */
 
+		/* Merge Sort */
+		// Mortes acumuladas
+		String mergeMortesAcumuladas[][] = convertToSplited(aList);
+		MergeSort.mergeSort(mergeMortesAcumuladas.length, mergeMortesAcumuladas, 10);
+		writeAllLinesToFile("mergeMortesAcumuladas", mergeMortesAcumuladas);
+		// Quantidade de casos
+		String mergeQuantidadeDeCasos[][] = convertToSplited(aList);
+		MergeSort.mergeSort(mergeQuantidadeDeCasos.length, mergeQuantidadeDeCasos, 7);
+		writeAllLinesToFile("mergeQuantidadeDeCasos", mergeQuantidadeDeCasos);
+		// Quantidade de casos
+		String mergeNomeCidade[][] = convertToSplited(aList);
+		MergeSort.mergeSortString(mergeNomeCidade.length, mergeNomeCidade);
+		writeAllLinesToFile("mergeNomeCidade", mergeNomeCidade);
+
 	}
 
 	/*Lê as linhas do arquivo e armazena em um array */
