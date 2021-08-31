@@ -11,10 +11,12 @@ public class Main {
 	public static String aList[] = new String[1];
 
     public static void main(String[] args) throws IOException {
+		
 		/*lê o arquivo de dados*/
 		readAllLinesFromFile(CSV_PATH);
 
 		/* Selection Sort*/
+
 		// Mortes acumuladas
 		String selectionMortesAcumuladas[][] = convertToSplited(aList);
 		SelectionSort.selectionSortMortesAcumuladas(selectionMortesAcumuladas);
@@ -28,8 +30,8 @@ public class Main {
 		SelectionSort.selectionSortNomeCidade(selectionNomeCidade);
 		writeAllLinesToFile("selectionNomeCidade", selectionNomeCidade);
 
-
 		/* Insertion Sort */
+
 	}
 
 	/*Lê as linhas do arquivo e armazena em um array */
