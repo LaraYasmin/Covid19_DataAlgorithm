@@ -46,6 +46,20 @@ public class Main {
 		MergeSort.mergeSortString(mergeNomeCidade.length, mergeNomeCidade);
 		writeAllLinesToFile("mergeNomeCidade", mergeNomeCidade);
 
+		/* Quick Sort */
+		// Mortes acumuladas
+		String quickMortesAcumuladas[][] = convertToSplited(aList);
+		QuickSort.quickSort(quickMortesAcumuladas, 1, quickMortesAcumuladas.length - 1, 10);
+		writeAllLinesToFile("quickMortesAcumuladas", quickMortesAcumuladas);
+		// Quantidade de casos
+		String quickQuantidadeDeCasos[][] = convertToSplited(aList);
+		QuickSort.quickSort(quickQuantidadeDeCasos, 1, quickQuantidadeDeCasos.length - 1, 7);
+		writeAllLinesToFile("quickQuantidadeDeCasos", quickQuantidadeDeCasos);
+		// Quantidade de casos
+		String quickNomeCidade[][] = convertToSplited(aList);
+		QuickSort.quickSortString(quickNomeCidade, 1, quickNomeCidade.length - 1);
+		writeAllLinesToFile("quickNomeCidade", quickNomeCidade);
+
 	}
 
 	/*Lê as linhas do arquivo e armazena em um array */
