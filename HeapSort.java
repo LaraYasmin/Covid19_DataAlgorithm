@@ -46,7 +46,7 @@ public class HeapSort {
 
         for(int i = 0; i < n; i++) {
             if(arr[i][coluna] == null) {
-                arr[i][coluna] = "0";
+                arr[i][coluna] = "";
             }
         }
  
