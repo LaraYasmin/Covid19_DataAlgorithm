@@ -71,6 +71,20 @@ public class Main {
 		QuickSort.quickSortString(quickNomeCidade, 1, quickNomeCidade.length - 1);
 		writeAllLinesToFile("quickNomeCidade", quickNomeCidade);
 
+		/* Quick Sort Mediana de tres*/
+		// Mortes acumuladas
+		String quickMedTresMortesAcumuladas[][] = convertToSplited(aList);
+		QuickSortMedianaDeTres.quicksortMedianaDeTres(quickMedTresMortesAcumuladas, 10);
+		writeAllLinesToFile("quickMedianaTresMortesAcumuladas", quickMedTresMortesAcumuladas);
+		// Quantidade de casos
+		String quickMedTresCasosAcumulados[][] = convertToSplited(aList);
+		QuickSortMedianaDeTres.quicksortMedianaDeTres(quickMedTresCasosAcumulados, 7);
+		writeAllLinesToFile("quickMedianaTresCasosAcumulados", quickMedTresCasosAcumulados);
+		// Quantidade de casos
+		String quickMedTresNomeCidade[][] = convertToSplited(aList);
+		QuickSortMedianaDeTres.quicksortMedianaDeTresString(quickMedTresNomeCidade);
+		writeAllLinesToFile("quickMedianaTresNomeCidade", quickMedTresNomeCidade);
+
 		/* Heap Sort */
 		// Mortes acumuladas
 		String heapMortesAcumuladas[][] = convertToSplited(aList);
@@ -97,7 +111,7 @@ public class Main {
 		// Quantidade de casos
 		// Não é possível fazer
 
-		
+
 
 	}
 
