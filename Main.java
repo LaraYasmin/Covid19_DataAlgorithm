@@ -16,7 +16,6 @@ public class Main {
 		readAllLinesFromFile(CSV_PATH);
 
 		/* Selection Sort*/
-
 		// Mortes acumuladas
 		String selectionMortesAcumuladas[][] = convertToSplited(aList);
 		SelectionSort.selectionSortMortesAcumuladas(selectionMortesAcumuladas);
@@ -31,6 +30,18 @@ public class Main {
 		writeAllLinesToFile("selectionNomeCidade", selectionNomeCidade);
 
 		/* Insertion Sort */
+		// Mortes acumuladas
+		String insertionMortesAcumuladas[][] = convertToSplited(aList);
+		InsertionSort.insertionSortMortesAcumuladas(insertionMortesAcumuladas);
+		writeAllLinesToFile("insertionMortesAcumuladas", insertionMortesAcumuladas);
+		// Quantidade de casos
+		String insertionQuantidadeDeCasos[][] = convertToSplited(aList);
+		InsertionSort.insertionSortQuantidadeDeCasos(insertionQuantidadeDeCasos);
+		writeAllLinesToFile("insertionQuantidadeDeCasos", insertionQuantidadeDeCasos);
+		// Nome de cidades
+		String insertionNomeCidade[][] = convertToSplited(aList);
+		InsertionSort.insertionSortNomeCidade(insertionNomeCidade);
+		writeAllLinesToFile("insertionNomeCidade", insertionNomeCidade);
 
 		/* Merge Sort */
 		// Mortes acumuladas
@@ -59,6 +70,20 @@ public class Main {
 		String quickNomeCidade[][] = convertToSplited(aList);
 		QuickSort.quickSortString(quickNomeCidade, 1, quickNomeCidade.length - 1);
 		writeAllLinesToFile("quickNomeCidade", quickNomeCidade);
+
+		/* Heap Sort */
+		// Mortes acumuladas
+		String heapMortesAcumuladas[][] = convertToSplited(aList);
+		HeapSort.heapSort(heapMortesAcumuladas, 10);
+		writeAllLinesToFile("heapMortesAcumuladas", heapMortesAcumuladas);
+		// Quantidade de casos
+		String heapQuantidadeDeCasos[][] = convertToSplited(aList);
+		HeapSort.heapSort(heapQuantidadeDeCasos, 7);
+		writeAllLinesToFile("heapQuantidadeDeCasos", heapQuantidadeDeCasos);
+		// Quantidade de casos
+		String heapNomeCidade[][] = convertToSplited(aList);
+		HeapSort.heapSortString(heapNomeCidade, 4);
+		writeAllLinesToFile("heapNomeCidade", heapNomeCidade);
 
 	}
 
