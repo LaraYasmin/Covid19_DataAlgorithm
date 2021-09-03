@@ -85,6 +85,20 @@ public class Main {
 		HeapSort.heapSortString(heapNomeCidade, 4);
 		writeAllLinesToFile("heapNomeCidade", heapNomeCidade);
 
+		/* Counting Sort */
+		// Mortes acumuladas
+		String countMortesAcumuladas[][] = convertToSplited(aList);
+		CountingSort.countingSortMortesAcumuladas(countMortesAcumuladas, countMortesAcumuladas.length);
+		writeAllLinesToFile("countingMortesAcumuladas", countMortesAcumuladas);
+		// // Quantidade de casos
+		String countCasosAcumulados[][] = convertToSplited(aList);
+		CountingSort.countingSortCasosAcumulados(countCasosAcumulados, countCasosAcumulados.length);
+		writeAllLinesToFile("countingCasosAcumulados", countCasosAcumulados);
+		// Quantidade de casos
+		// Não é possível fazer
+
+		
+
 	}
 
 	/*Lê as linhas do arquivo e armazena em um array */
