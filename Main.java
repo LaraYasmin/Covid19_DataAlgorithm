@@ -21,22 +21,63 @@ public class Main {
 		long startTime = System.currentTimeMillis();
 		SelectionSort.selectionSortMortesAcumuladas(selectionMortesAcumuladas);
 		long endTime = System.currentTimeMillis();
-		System.out.println("Selection Sort Mortes Acumuladas: " + (endTime - startTime));
+		System.out.println("Selection Sort Mortes Acumuladas medio caso: " + (endTime - startTime));
 		writeAllLinesToFile("selectionMortesAcumuladas", selectionMortesAcumuladas);
+
+		startTime = System.currentTimeMillis();
+		SelectionSort.selectionSortMortesAcumuladas(selectionMortesAcumuladas);
+		endTime = System.currentTimeMillis();
+		System.out.println("Selection Sort Mortes Acumuladas melhor caso: " + (endTime - startTime));
+
+		selectionMortesAcumuladas = inverterVetor(selectionMortesAcumuladas);
+		startTime = System.currentTimeMillis();
+		SelectionSort.selectionSortMortesAcumuladas(selectionMortesAcumuladas);
+		endTime = System.currentTimeMillis();
+		System.out.println("Selection Sort Mortes Acumuladas pior caso: " + (endTime - startTime));
+
+		System.out.println("====================================================================");
+
 		// Quantidade de casos
 		String selectionQuantidadeDeCasos[][] = convertToSplited(aList);
 		startTime = System.currentTimeMillis();
 		SelectionSort.selectionSortQuantidadeDeCasos(selectionQuantidadeDeCasos);
 		endTime = System.currentTimeMillis();
-		System.out.println("Selection Sort Casos Acumulados: " + (endTime - startTime));
+		System.out.println("Selection Sort Casos Acumulados medio caso: " + (endTime - startTime));
 		writeAllLinesToFile("selectionQuantidadeDeCasos", selectionQuantidadeDeCasos);
+
+		startTime = System.currentTimeMillis();
+		SelectionSort.selectionSortQuantidadeDeCasos(selectionQuantidadeDeCasos);
+		endTime = System.currentTimeMillis();
+		System.out.println("Selection Sort Casos Acumulados melhor caso: " + (endTime - startTime));
+
+		selectionQuantidadeDeCasos = inverterVetor(selectionQuantidadeDeCasos);
+		startTime = System.currentTimeMillis();
+		SelectionSort.selectionSortQuantidadeDeCasos(selectionQuantidadeDeCasos);
+		endTime = System.currentTimeMillis();
+		System.out.println("Selection Sort Casos Acumulados pior caso: " + (endTime - startTime));
+
+		System.out.println("====================================================================");
+
 		// Nome de cidades
 		String selectionNomeCidade[][] = convertToSplited(aList);
 		startTime = System.currentTimeMillis();
 		SelectionSort.selectionSortNomeCidade(selectionNomeCidade);
 		endTime = System.currentTimeMillis();
-		System.out.println("Selection Sort Nomes de Cidade: " + (endTime - startTime));
+		System.out.println("Selection Sort Nomes de Cidade caso medio: " + (endTime - startTime));
 		writeAllLinesToFile("selectionNomeCidade", selectionNomeCidade);
+
+		startTime = System.currentTimeMillis();
+		SelectionSort.selectionSortNomeCidade(selectionNomeCidade);
+		endTime = System.currentTimeMillis();
+		System.out.println("Selection Sort Nomes de Cidade melhor caso: " + (endTime - startTime));
+		
+		selectionNomeCidade = inverterVetor(selectionNomeCidade);
+		startTime = System.currentTimeMillis();
+		SelectionSort.selectionSortNomeCidade(selectionNomeCidade);
+		endTime = System.currentTimeMillis();
+		System.out.println("Selection Sort Nomes de Cidade pior caso: " + (endTime - startTime));
+
+		System.out.println("====================================================================");
 
 		/* Insertion Sort */
 		// Mortes acumuladas
@@ -44,22 +85,63 @@ public class Main {
 		startTime = System.currentTimeMillis();
 		InsertionSort.insertionSortMortesAcumuladas(insertionMortesAcumuladas);
 		endTime = System.currentTimeMillis();
-		System.out.println("Insertion Sort Mortes Acumuladas: " + (endTime - startTime));
+		System.out.println("Insertion Sort Mortes Acumuladas caso medio: " + (endTime - startTime));
 		writeAllLinesToFile("insertionMortesAcumuladas", insertionMortesAcumuladas);
+
+		startTime = System.currentTimeMillis();
+		InsertionSort.insertionSortMortesAcumuladas(insertionMortesAcumuladas);
+		endTime = System.currentTimeMillis();
+		System.out.println("Insertion Sort Mortes Acumuladas melhor caso: " + (endTime - startTime));
+
+		insertionMortesAcumuladas = inverterVetor(insertionMortesAcumuladas);
+		startTime = System.currentTimeMillis();
+		InsertionSort.insertionSortMortesAcumuladas(insertionMortesAcumuladas);
+		endTime = System.currentTimeMillis();
+		System.out.println("Insertion Sort Mortes Acumuladas pior caso: " + (endTime - startTime));
+
+		System.out.println("====================================================================");
+
 		// Quantidade de casos
 		String insertionQuantidadeDeCasos[][] = convertToSplited(aList);
 		startTime = System.currentTimeMillis();
 		InsertionSort.insertionSortQuantidadeDeCasos(insertionQuantidadeDeCasos);
 		endTime = System.currentTimeMillis();
-		System.out.println("Insertion Sort Casos Acumulados: " + (endTime - startTime));
+		System.out.println("Insertion Sort Casos Acumulados caso medio: " + (endTime - startTime));
 		writeAllLinesToFile("insertionQuantidadeDeCasos", insertionQuantidadeDeCasos);
+
+		startTime = System.currentTimeMillis();
+		InsertionSort.insertionSortQuantidadeDeCasos(insertionQuantidadeDeCasos);
+		endTime = System.currentTimeMillis();
+		System.out.println("Insertion Sort Casos Acumulados melhor caso: " + (endTime - startTime));
+
+		insertionQuantidadeDeCasos = inverterVetor(insertionQuantidadeDeCasos);
+		startTime = System.currentTimeMillis();
+		InsertionSort.insertionSortQuantidadeDeCasos(insertionQuantidadeDeCasos);
+		endTime = System.currentTimeMillis();
+		System.out.println("Insertion Sort Casos Acumulados melhor caso: " + (endTime - startTime));
+
+		System.out.println("====================================================================");
+
 		// Nome de cidades
 		String insertionNomeCidade[][] = convertToSplited(aList);
 		startTime = System.currentTimeMillis();
 		InsertionSort.insertionSortNomeCidade(insertionNomeCidade);
 		endTime = System.currentTimeMillis();
-		System.out.println("Insertion Sort Nomes de Cidades: " + (endTime - startTime));
+		System.out.println("Insertion Sort Nomes de Cidades caso medio: " + (endTime - startTime));
 		writeAllLinesToFile("insertionNomeCidade", insertionNomeCidade);
+
+		startTime = System.currentTimeMillis();
+		InsertionSort.insertionSortNomeCidade(insertionNomeCidade);
+		endTime = System.currentTimeMillis();
+		System.out.println("Insertion Sort Nomes de Cidades melhor caso: " + (endTime - startTime));
+
+		insertionNomeCidade = inverterVetor(insertionNomeCidade);
+		startTime = System.currentTimeMillis();
+		InsertionSort.insertionSortNomeCidade(insertionNomeCidade);
+		endTime = System.currentTimeMillis();
+		System.out.println("Insertion Sort Nomes de Cidades pior caso: " + (endTime - startTime));
+
+		System.out.println("====================================================================");
 
 		/* Merge Sort */
 		// Mortes acumuladas
@@ -67,22 +149,63 @@ public class Main {
 		startTime = System.currentTimeMillis();
 		MergeSort.mergeSort(mergeMortesAcumuladas.length, mergeMortesAcumuladas, 10);
 		endTime = System.currentTimeMillis();
-		System.out.println("Merge Sort Mortes Acumuladas: " + (endTime - startTime));
+		System.out.println("Merge Sort Mortes Acumuladas caso medio: " + (endTime - startTime));
 		writeAllLinesToFile("mergeMortesAcumuladas", mergeMortesAcumuladas);
+
+		startTime = System.currentTimeMillis();
+		MergeSort.mergeSort(mergeMortesAcumuladas.length, mergeMortesAcumuladas, 10);
+		endTime = System.currentTimeMillis();
+		System.out.println("Merge Sort Mortes Acumuladas melhor caso: " + (endTime - startTime));
+
+		mergeMortesAcumuladas = inverterVetor(mergeMortesAcumuladas);
+		startTime = System.currentTimeMillis();
+		MergeSort.mergeSort(mergeMortesAcumuladas.length, mergeMortesAcumuladas, 10);
+		endTime = System.currentTimeMillis();
+		System.out.println("Merge Sort Mortes Acumuladas pior caso: " + (endTime - startTime));
+
+		System.out.println("====================================================================");
+
 		// Quantidade de casos
 		String mergeQuantidadeDeCasos[][] = convertToSplited(aList);
 		startTime = System.currentTimeMillis();
 		MergeSort.mergeSort(mergeQuantidadeDeCasos.length, mergeQuantidadeDeCasos, 7);
 		endTime = System.currentTimeMillis();
-		System.out.println("Merge Sort Casos Acumulados: " + (endTime - startTime));
+		System.out.println("Merge Sort Casos Acumulados caso medio: " + (endTime - startTime));
 		writeAllLinesToFile("mergeQuantidadeDeCasos", mergeQuantidadeDeCasos);
-		// Quantidade de casos
+
+		startTime = System.currentTimeMillis();
+		MergeSort.mergeSort(mergeQuantidadeDeCasos.length, mergeQuantidadeDeCasos, 7);
+		endTime = System.currentTimeMillis();
+		System.out.println("Merge Sort Casos Acumulados melhor caso: " + (endTime - startTime));
+
+		mergeQuantidadeDeCasos = inverterVetor(mergeQuantidadeDeCasos);
+		startTime = System.currentTimeMillis();
+		MergeSort.mergeSort(mergeQuantidadeDeCasos.length, mergeQuantidadeDeCasos, 7);
+		endTime = System.currentTimeMillis();
+		System.out.println("Merge Sort Casos Acumulados pior caso: " + (endTime - startTime));
+
+		System.out.println("====================================================================");
+
+		// Nomes de Cidade
 		String mergeNomeCidade[][] = convertToSplited(aList);
 		startTime = System.currentTimeMillis();
 		MergeSort.mergeSortString(mergeNomeCidade.length, mergeNomeCidade);
 		endTime = System.currentTimeMillis();
-		System.out.println("Merge Sort Nomes de Cidade: " + (endTime - startTime));
+		System.out.println("Merge Sort Nomes de Cidade caso medio: " + (endTime - startTime));
 		writeAllLinesToFile("mergeNomeCidade", mergeNomeCidade);
+
+		startTime = System.currentTimeMillis();
+		MergeSort.mergeSortString(mergeNomeCidade.length, mergeNomeCidade);
+		endTime = System.currentTimeMillis();
+		System.out.println("Merge Sort Nomes de Cidade melhor caso: " + (endTime - startTime));
+
+		mergeNomeCidade = inverterVetor(mergeNomeCidade);
+		startTime = System.currentTimeMillis();
+		MergeSort.mergeSortString(mergeNomeCidade.length, mergeNomeCidade);
+		endTime = System.currentTimeMillis();
+		System.out.println("Merge Sort Nomes de Cidade pior caso: " + (endTime - startTime));
+
+		System.out.println("====================================================================");
 
 		/* Quick Sort */
 		// Mortes acumuladas
@@ -90,22 +213,61 @@ public class Main {
 		startTime = System.currentTimeMillis();
 		QuickSort.quickSort(quickMortesAcumuladas, 1, quickMortesAcumuladas.length - 1, 10);
 		endTime = System.currentTimeMillis();
-		System.out.println("Quick Sort Mortes Acumuladas: " + (endTime - startTime));
+		System.out.println("Quick Sort Mortes Acumuladas caso medio: " + (endTime - startTime));
 		writeAllLinesToFile("quickMortesAcumuladas", quickMortesAcumuladas);
+
+		startTime = System.currentTimeMillis();
+		QuickSort.quickSort(quickMortesAcumuladas, 1, quickMortesAcumuladas.length - 1, 10);
+		endTime = System.currentTimeMillis();
+		System.out.println("Quick Sort Mortes Acumuladas melhor caso: " + (endTime - startTime));
+
+		quickMortesAcumuladas = inverterVetor(quickMortesAcumuladas);
+		startTime = System.currentTimeMillis();
+		QuickSort.quickSort(quickMortesAcumuladas, 1, quickMortesAcumuladas.length - 1, 10);
+		endTime = System.currentTimeMillis();
+		System.out.println("Quick Sort Mortes Acumuladas pior caso: " + (endTime - startTime));
+
+		System.out.println("====================================================================");
+
 		// Quantidade de casos
 		String quickQuantidadeDeCasos[][] = convertToSplited(aList);
 		startTime = System.currentTimeMillis();
 		QuickSort.quickSort(quickQuantidadeDeCasos, 1, quickQuantidadeDeCasos.length - 1, 7);
 		endTime = System.currentTimeMillis();
-		System.out.println("Quick Sort Casos Acumulados: " + (endTime - startTime));
+		System.out.println("Quick Sort Casos Acumulados caso medio: " + (endTime - startTime));
 		writeAllLinesToFile("quickQuantidadeDeCasos", quickQuantidadeDeCasos);
-		// Quantidade de casos
+
+		startTime = System.currentTimeMillis();
+		QuickSort.quickSort(quickQuantidadeDeCasos, 1, quickQuantidadeDeCasos.length - 1, 7);
+		endTime = System.currentTimeMillis();
+		System.out.println("Quick Sort Casos Acumulados melhor caso: " + (endTime - startTime));
+
+		quickQuantidadeDeCasos = inverterVetor(quickQuantidadeDeCasos);
+		startTime = System.currentTimeMillis();
+		QuickSort.quickSort(quickQuantidadeDeCasos, 1, quickQuantidadeDeCasos.length - 1, 7);
+		endTime = System.currentTimeMillis();
+		System.out.println("Quick Sort Casos Acumulados pior caso: " + (endTime - startTime));
+
+		System.out.println("====================================================================");
+
+		// Nomes de cidade
 		String quickNomeCidade[][] = convertToSplited(aList);
 		startTime = System.currentTimeMillis();
 		QuickSort.quickSortString(quickNomeCidade, 1, quickNomeCidade.length - 1);
 		endTime = System.currentTimeMillis();
-		System.out.println("Quick Sort Nomes de Cidade: " + (endTime - startTime));
+		System.out.println("Quick Sort Nomes de Cidade caso medio: " + (endTime - startTime));
 		writeAllLinesToFile("quickNomeCidade", quickNomeCidade);
+
+		QuickSort.quickSortString(quickNomeCidade, 1, quickNomeCidade.length - 1);
+		endTime = System.currentTimeMillis();
+		System.out.println("Quick Sort Nomes de Cidade melhor caso: " + (endTime - startTime));
+
+		quickNomeCidade = inverterVetor(quickNomeCidade);
+		QuickSort.quickSortString(quickNomeCidade, 1, quickNomeCidade.length - 1);
+		endTime = System.currentTimeMillis();
+		System.out.println("Quick Sort Nomes de Cidade pior caso: " + (endTime - startTime));
+
+		System.out.println("====================================================================");
 
 		/* Quick Sort Mediana de tres*/
 		// Mortes acumuladas
@@ -113,22 +275,63 @@ public class Main {
 		startTime = System.currentTimeMillis();
 		QuickSortMedianaDeTres.quicksortMedianaDeTres(quickMedTresMortesAcumuladas, 10);
 		endTime = System.currentTimeMillis();
-		System.out.println("Quick Sort Mediana de Tres Mortes Acumuladas: " + (endTime - startTime));
+		System.out.println("Quick Sort Mediana de Tres Mortes Acumuladas caso medio: " + (endTime - startTime));
 		writeAllLinesToFile("quickMedianaTresMortesAcumuladas", quickMedTresMortesAcumuladas);
+
+		startTime = System.currentTimeMillis();
+		QuickSortMedianaDeTres.quicksortMedianaDeTres(quickMedTresMortesAcumuladas, 10);
+		endTime = System.currentTimeMillis();
+		System.out.println("Quick Sort Mediana de Tres Mortes Acumuladas melhor caso: " + (endTime - startTime));
+
+		quickMedTresMortesAcumuladas = inverterVetor(quickMedTresMortesAcumuladas);
+		startTime = System.currentTimeMillis();
+		QuickSortMedianaDeTres.quicksortMedianaDeTres(quickMedTresMortesAcumuladas, 10);
+		endTime = System.currentTimeMillis();
+		System.out.println("Quick Sort Mediana de Tres Mortes Acumuladas pior caso: " + (endTime - startTime));
+		
+		System.out.println("====================================================================");
+
 		// Quantidade de casos
 		String quickMedTresCasosAcumulados[][] = convertToSplited(aList);
 		startTime = System.currentTimeMillis();
 		QuickSortMedianaDeTres.quicksortMedianaDeTres(quickMedTresCasosAcumulados, 7);
 		endTime = System.currentTimeMillis();
-		System.out.println("Quick Sort Mediana de Tres Casos Acumulados: " + (endTime - startTime));
+		System.out.println("Quick Sort Mediana de Tres Casos Acumulados caso medio: " + (endTime - startTime));
 		writeAllLinesToFile("quickMedianaTresCasosAcumulados", quickMedTresCasosAcumulados);
-		// Quantidade de casos
+
+		startTime = System.currentTimeMillis();
+		QuickSortMedianaDeTres.quicksortMedianaDeTres(quickMedTresCasosAcumulados, 7);
+		endTime = System.currentTimeMillis();
+		System.out.println("Quick Sort Mediana de Tres Casos Acumulados melhor caso: " + (endTime - startTime));
+
+		quickMedTresCasosAcumulados = inverterVetor(quickMedTresCasosAcumulados);
+		startTime = System.currentTimeMillis();
+		QuickSortMedianaDeTres.quicksortMedianaDeTres(quickMedTresCasosAcumulados, 7);
+		endTime = System.currentTimeMillis();
+		System.out.println("Quick Sort Mediana de Tres Casos Acumulados pior caso: " + (endTime - startTime));
+
+		System.out.println("====================================================================");
+
+		// Nome de cidade
 		String quickMedTresNomeCidade[][] = convertToSplited(aList);
 		startTime = System.currentTimeMillis();
 		QuickSortMedianaDeTres.quicksortMedianaDeTresString(quickMedTresNomeCidade);
 		endTime = System.currentTimeMillis();
-		System.out.println("Quick Sort Mediana de Tres Nomes de Cidade: " + (endTime - startTime));
+		System.out.println("Quick Sort Mediana de Tres Nomes de Cidade caso medio: " + (endTime - startTime));
 		writeAllLinesToFile("quickMedianaTresNomeCidade", quickMedTresNomeCidade);
+
+		startTime = System.currentTimeMillis();
+		QuickSortMedianaDeTres.quicksortMedianaDeTresString(quickMedTresNomeCidade);
+		endTime = System.currentTimeMillis();
+		System.out.println("Quick Sort Mediana de Tres Nomes de Cidade melhor caso: " + (endTime - startTime));
+
+		quickMedTresNomeCidade = inverterVetor(quickMedTresNomeCidade);
+		startTime = System.currentTimeMillis();
+		QuickSortMedianaDeTres.quicksortMedianaDeTresString(quickMedTresNomeCidade);
+		endTime = System.currentTimeMillis();
+		System.out.println("Quick Sort Mediana de Tres Nomes de Cidade pior caso: " + (endTime - startTime));
+
+		System.out.println("====================================================================");
 
 		/* Heap Sort */
 		// Mortes acumuladas
@@ -136,22 +339,66 @@ public class Main {
 		startTime = System.currentTimeMillis();
 		HeapSort.heapSort(heapMortesAcumuladas, 10);
 		endTime = System.currentTimeMillis();
-		System.out.println("Heap Sort Mortes Acumuladas: " + (endTime - startTime));
+		System.out.println("Heap Sort Mortes Acumuladas caso medio: " + (endTime - startTime));
 		writeAllLinesToFile("heapMortesAcumuladas", heapMortesAcumuladas);
+
+		heapMortesAcumuladas = heapAux(heapMortesAcumuladas);
+		startTime = System.currentTimeMillis();
+		HeapSort.heapSort(heapMortesAcumuladas, 10);
+		endTime = System.currentTimeMillis();
+		System.out.println("Heap Sort Mortes Acumuladas melhor caso: " + (endTime - startTime));
+
+		heapMortesAcumuladas = inverterVetor(heapMortesAcumuladas);
+		startTime = System.currentTimeMillis();
+		HeapSort.heapSort(heapMortesAcumuladas, 10);
+		endTime = System.currentTimeMillis();
+		System.out.println("Heap Sort Mortes Acumuladas pior caso: " + (endTime - startTime));
+
+		System.out.println("====================================================================");
+
 		// Quantidade de casos
 		String heapQuantidadeDeCasos[][] = convertToSplited(aList);
 		startTime = System.currentTimeMillis();
 		HeapSort.heapSort(heapQuantidadeDeCasos, 7);
 		endTime = System.currentTimeMillis();
-		System.out.println("Heap Sort Casos Acumulados: " + (endTime - startTime));
+		System.out.println("Heap Sort Casos Acumulados caso medio: " + (endTime - startTime));
 		writeAllLinesToFile("heapQuantidadeDeCasos", heapQuantidadeDeCasos);
-		// Quantidade de casos
+
+		heapQuantidadeDeCasos = heapAux(heapQuantidadeDeCasos);
+		startTime = System.currentTimeMillis();
+		HeapSort.heapSort(heapQuantidadeDeCasos, 10);
+		endTime = System.currentTimeMillis();
+		System.out.println("Heap Sort Quantidade de Casos melhor caso: " + (endTime - startTime));
+
+		heapQuantidadeDeCasos = inverterVetor(heapQuantidadeDeCasos);
+		startTime = System.currentTimeMillis();
+		HeapSort.heapSort(heapQuantidadeDeCasos, 10);
+		endTime = System.currentTimeMillis();
+		System.out.println("Heap Sort Quantidade de Casos pior caso: " + (endTime - startTime));
+
+		System.out.println("====================================================================");
+
+		// Nomes de cidade
 		String heapNomeCidade[][] = convertToSplited(aList);
 		startTime = System.currentTimeMillis();
 		HeapSort.heapSortString(heapNomeCidade, 4);
 		endTime = System.currentTimeMillis();
-		System.out.println("Heap Sort Nomes de Cidade: " + (endTime - startTime));
+		System.out.println("Heap Sort Nomes de Cidade caso medio: " + (endTime - startTime));
 		writeAllLinesToFile("heapNomeCidade", heapNomeCidade);
+
+		heapNomeCidade = heapAux(heapNomeCidade);
+		startTime = System.currentTimeMillis();
+		HeapSort.heapSort(heapNomeCidade, 10);
+		endTime = System.currentTimeMillis();
+		System.out.println("Heap Sort Nome de Cidade melhor caso: " + (endTime - startTime));
+
+		heapNomeCidade = inverterVetor(heapNomeCidade);
+		startTime = System.currentTimeMillis();
+		HeapSort.heapSort(heapNomeCidade, 10);
+		endTime = System.currentTimeMillis();
+		System.out.println("Heap Sort Nome de Cidade pior caso: " + (endTime - startTime));
+
+		System.out.println("====================================================================");
 
 		/* Counting Sort */
 		// Mortes acumuladas
@@ -159,19 +406,43 @@ public class Main {
 		startTime = System.currentTimeMillis();
 		CountingSort.countingSortMortesAcumuladas(countMortesAcumuladas, countMortesAcumuladas.length);
 		endTime = System.currentTimeMillis();
-		System.out.println("Counting Sort Mortes Acumuladas: " + (endTime - startTime));
+		System.out.println("Counting Sort Mortes Acumuladas caso medio: " + (endTime - startTime));
 		writeAllLinesToFile("countingMortesAcumuladas", countMortesAcumuladas);
+
+		startTime = System.currentTimeMillis();
+		CountingSort.countingSortMortesAcumuladas(countMortesAcumuladas, countMortesAcumuladas.length);
+		endTime = System.currentTimeMillis();
+		System.out.println("Counting Sort Mortes Acumuladas melhor caso: " + (endTime - startTime));
+
+		countMortesAcumuladas = inverterVetor(countMortesAcumuladas);
+		startTime = System.currentTimeMillis();
+		CountingSort.countingSortMortesAcumuladas(countMortesAcumuladas, countMortesAcumuladas.length);
+		endTime = System.currentTimeMillis();
+		System.out.println("Counting Sort Mortes Acumuladas pior caso: " + (endTime - startTime));
+
+		System.out.println("====================================================================");
+
 		// // Quantidade de casos
 		String countCasosAcumulados[][] = convertToSplited(aList);
 		startTime = System.currentTimeMillis();
 		CountingSort.countingSortCasosAcumulados(countCasosAcumulados, countCasosAcumulados.length);
 		endTime = System.currentTimeMillis();
-		System.out.println("Counting Sort Casos Acumulados: " + (endTime - startTime));
+		System.out.println("Counting Sort Casos Acumulados caso medio: " + (endTime - startTime));
 		writeAllLinesToFile("countingCasosAcumulados", countCasosAcumulados);
-		// Quantidade de casos
+
+		startTime = System.currentTimeMillis();
+		CountingSort.countingSortCasosAcumulados(countCasosAcumulados, countCasosAcumulados.length);
+		endTime = System.currentTimeMillis();
+		System.out.println("Counting Sort Casos Acumulados melhor caso: " + (endTime - startTime));
+
+		countCasosAcumulados = inverterVetor(countCasosAcumulados);
+		startTime = System.currentTimeMillis();
+		CountingSort.countingSortCasosAcumulados(countCasosAcumulados, countCasosAcumulados.length);
+		endTime = System.currentTimeMillis();
+		System.out.println("Counting Sort Casos Acumulados pior caso: " + (endTime - startTime));
+
+		// Nome de cidade
 		// Não é possível fazer
-
-
 
 	}
 
@@ -236,4 +507,23 @@ public class Main {
     	}
 	}
 
+	public static String[][] inverterVetor(String vet[][]) {		
+        String[] temp;		
+        for (int i = 0; i < vet.length; i++) {
+            for (int j = 1; j < i; j++) {
+                temp = vet[i];
+                vet[i] = vet[j];
+                vet[j] = temp;
+            }
+        } 		
+        return vet;		
+    }
+
+	public static String[][] heapAux(String vet[][]) {		
+        String[][] temp = new String[vet.length][16];		
+        for (int i = 0; i < vet.length - 1; i++) {
+            temp[i] = vet[i];
+        } 		
+        return temp;		
+    }
 }
