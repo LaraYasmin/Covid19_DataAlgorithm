@@ -1,6 +1,7 @@
 public class MergeSort {
 
-    /* Merge sort para ordenar inteiros */
+    /* método que ordena o array usando merge sort tomando a coluna como parametro
+    para ordenar por mortes acumuladas ou quantidade de casos */
     public static void mergeSort(int tamanho, String[][] vetor, int coluna) {
       int elementos = 1;
       int inicio, meio, fim;
@@ -24,7 +25,7 @@ public class MergeSort {
       }
   }
 
-  /* intercala para inteiros*/
+  /* intercala para mortes acumuladas e quantidade de casos tomando a coluna como parametro*/
   public static void intercala(String[][] vetor, int inicio, int meio, int fim, int coluna) {
     String novoVetor[][] = new String[fim - inicio][16];
     int i = inicio;
@@ -66,7 +67,8 @@ public class MergeSort {
         }
     }
 
-    /* merge sort para string*/
+    /* método que ordena o array usando merge sort para strings
+    para ordenar por nomes de cidade*/
     public static void mergeSortString(int tamanho, String[][] vetor) {
     int elementos = 1;
     int inicio, meio, fim;
@@ -90,7 +92,7 @@ public class MergeSort {
     }
   }
 
- /* intercala para string */
+ /* intercala para nomes de cidade*/
   public static void intercalaString(String[][] vetor, int inicio, int meio, int fim) {
     String novoVetor[][] = new String[fim - inicio][16];
     int i = inicio;

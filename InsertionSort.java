@@ -1,5 +1,6 @@
 public class InsertionSort {
 
+    /** Método que ordena o array usando insertion sort para as mortes acumuladas */
     public static void insertionSortMortesAcumuladas(String[][] vetor) {
         for(int i = 0; i < vetor.length; i++) {
             if(vetor[i][10] == null) {
@@ -24,6 +25,7 @@ public class InsertionSort {
         }
     }
 
+    /** Método que ordena o array usando insertion sort para a quantidade de casos */
     public static void insertionSortQuantidadeDeCasos(String[][] vetor) {
         for(int i = 0; i < vetor.length; i++) {
             if(vetor[i][7] == null) {
@@ -47,6 +49,7 @@ public class InsertionSort {
         }
     }
 
+    /** Método que ordena o array usando insertion sort para os nomes de cidade */
     public static void insertionSortNomeCidade(String[][] vetor) {
         for(int i = 0; i < vetor.length; i++) {
             if(vetor[i][4] == null) {
