@@ -8,7 +8,11 @@ Esse projeto foi desenvolvido com a finalidade de ordenar um arquivo base CSV co
 
 2) Clone esse projeto na sua máquina local ou vá até releases e baixe o código fonte do projeto
 
-3) Vá até o site https://brasil.io/dataset/covid19/caso_full/ e gere um novo arquivo de dados para todas as cidades do Brasil
+3) Vá até o site https://brasil.io/dataset/covid19/caso_full/ e gere um novo arquivo de dados para todas as cidades do Brasil com os seguintes filtros
+![image](https://user-images.githubusercontent.com/42149534/132133606-590b6ea7-8d3f-4194-b765-09a13934bf51.png)
+
+Então clique em FILTRAR e BAIXAR RESULTADOS EM CSV*
+![image](https://user-images.githubusercontent.com/42149534/132133653-f4fa574f-a42a-497e-8dc1-a5bbcbd6b521.png)
 
 4) Com o projeto aberto no seu editor de código, cole o arquivo de dados dentro da pasta database
 ![image](https://user-images.githubusercontent.com/42149534/132132635-6cef7856-1b1c-401a-a44a-56cb0ba5e163.png)
