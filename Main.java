@@ -611,7 +611,7 @@ public class Main {
 
 	}
 
-	/*Lê as linhas do arquivo e armazena em um array */
+	/*Lê todas as linhas do arquivo e armazena em um vetor dinamico */
 	public static String[] readAllLinesFromFile(String path) throws IOException {
 
     	FileReader fileReader = new FileReader(path);
@@ -632,7 +632,7 @@ public class Main {
 
 	}
 
-	/* converte o vetor de strings para um array de linhas e colunas */
+	/* converte o vetor dinamico para um array de linhas e colunas */
 	public static String[][] convertToSplited(String[] arrSplit) {
     	String [][] splitArr = new String[aList.length][16];
 		int cont = 0;
@@ -672,6 +672,7 @@ public class Main {
     	}
 	}
 
+	/* Inverte o vetor já ordenado para fazer o calculo do pior caso*/
 	public static String[][] inverterVetor(String vet[][]) {		
         String[] temp;		
         for (int i = 0; i < vet.length; i++) {
@@ -684,6 +685,7 @@ public class Main {
         return vet;		
     }
 
+	/* Método auxiliar para o heap sort nao dar erro nos calculos de melhor e pior caso (exclui o ultimo elemento do array)*/
 	public static String[][] heapAux(String vet[][]) {		
         String[][] temp = new String[vet.length][16];		
         for (int i = 0; i < vet.length - 1; i++) {

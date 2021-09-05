@@ -1,4 +1,7 @@
 public class QuickSortMedianaDeTres {
+
+    /**método de quick sort usando a mediana de tres, tomando a coluna como parametro para
+    ordenar por mortes acumuladas ou quantidade de casos */
     public static void quicksortMedianaDeTres(String[][] A, int coluna){  
         for(int i = 0; i < A.length; i++) {
             if(A[i][coluna] == null) {
@@ -9,6 +12,8 @@ public class QuickSortMedianaDeTres {
         quicksortMedianaDeTres(A, 1, A.length - 1, coluna);
     }
 
+    /**  método de quick sort recursivo usando a mediana de tres, tomando a coluna como parametro
+    para ordernar por mortes acumuladas ou quantidade de casos*/
     private static void quicksortMedianaDeTres(String[][] A, int inicio, int fim, int coluna){        
         if(inicio < fim){
             int q = partition(A, inicio, fim, coluna);
@@ -17,7 +22,8 @@ public class QuickSortMedianaDeTres {
         }
     }
     
-    //Método de partição
+    /** Método de particao do para o quick sort usando mediana de tres, tomando a coluna como parametro
+    para ordenar por mortes acumuladas ou quantidade de casos */
     private static int partition(String[][] A, int inicio, int fim, int coluna){
         int meio = (inicio + fim)/2;
         String a = A[inicio][coluna];
@@ -60,12 +66,14 @@ public class QuickSortMedianaDeTres {
         return i + 1; 
     }
     
+    /** método de troca para o quick sort usando mediana de tres */
     private static void swap(String[][] A, int i, int j){
         String[] temp = A[i];
         A[i] = A[j];
         A[j] = temp;
     }
 
+    /**método de quick sort usando a mediana de tres, para ordenar por nomes de cidade */
     public static void quicksortMedianaDeTresString(String[][] A){  
         for(int i = 0; i < A.length; i++) {
             if(A[i][4] == null) {
@@ -76,6 +84,7 @@ public class QuickSortMedianaDeTres {
         quicksortMedianaDeTresString(A, 1, A.length - 1);
     }
 
+    /**método de quick sort recursivo usando a mediana de tres, para ordenar por nomes de cidade */
     private static void quicksortMedianaDeTresString(String[][] A, int inicio, int fim){        
         if(inicio < fim){
             int q = partitionString(A, inicio, fim);
@@ -84,7 +93,7 @@ public class QuickSortMedianaDeTres {
         }
     }
     
-    //Método de partição
+    /**método de particionamento usando a mediana de tres, para ordenar por nomes de cidade */
     private static int partitionString(String[][] A, int inicio, int fim){
         int meio = (inicio + fim)/2;
         String a = A[inicio][4];
@@ -127,6 +136,7 @@ public class QuickSortMedianaDeTres {
         return i + 1; 
     }
     
+    /**método de troca para quick sort usando a mediana de tres, para ordenar por nomes de cidade */
     private static void swapString(String[][] A, int i, int j){
         String[] temp = A[i];
         A[i] = A[j];

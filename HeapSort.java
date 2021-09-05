@@ -1,4 +1,7 @@
 public class HeapSort {
+    
+    /** Método que ordena o array usando o heap sort e toma a coluna como parametro
+    para fazer casos acumulados ou mortes acumuladas */
     public static void heapSort(String arr[][], int coluna) {
         int n = arr.length;
 
@@ -20,6 +23,7 @@ public class HeapSort {
         }
     }
  
+    /** Método de heapify para os casos acumulados e mortes acumuladas*/
     public static void heapify(String arr[][], int n, int i, int coluna) {
         int largest = i; 
         int l = 2 * i + 1; 
@@ -40,7 +44,8 @@ public class HeapSort {
             heapify(arr, n, largest, coluna);
         }
     }
-
+    /** Método que ordena o array usando o heap sort e toma a coluna como parametro
+    para fazer a comparação de strings de nomes de cidade */
     public static void heapSortString(String arr[][], int coluna) {
         int n = arr.length;
 
@@ -62,6 +67,7 @@ public class HeapSort {
         }
     }
 
+    /** Método de heapify para strings */
     public static void heapifyString(String arr[][], int n, int i, int coluna) {
         int largest = i; 
         int l = 2 * i + 1; 

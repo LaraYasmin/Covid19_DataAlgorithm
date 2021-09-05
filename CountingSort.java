@@ -1,4 +1,6 @@
 public class CountingSort {
+  
+  /* Método de ordena o array com couting sort usando a coluna das mortes acumuladas */
   public static void countingSortMortesAcumuladas(String array[][], int size) {
       for(int i = 0; i < array.length; i++) {
           if(array[i][10] == null) {
@@ -37,6 +39,7 @@ public class CountingSort {
     }
   }
 
+  /* Método que ordena o array com o counting sort usando a coluna dos casos acumulados */
   public static void countingSortCasosAcumulados(String array[][], int size) {
       for(int i = 0; i < array.length; i++) {
           if(array[i][7] == null) {
