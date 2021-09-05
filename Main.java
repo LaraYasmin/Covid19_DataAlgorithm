@@ -8,7 +8,7 @@ import java.util.*;
 public class Main {
 
 	/*Caminho em que o CSV original está localizado*/ 
-	public static final String CSV_PATH = "./database/covid19-49bdf44a58bf4ebfa5415b1eabadd3db.csv";
+	public static final String CSV_PATH = "";
 	/*Array que guarda todos os dados do CSV original*/ 
 	public static String aList[] = new String[1];
 

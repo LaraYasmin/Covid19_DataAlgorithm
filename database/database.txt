@@ -1,0 +1,1 @@
+Adicione nessa pasta o csv do https://brasil.io/dataset/covid19/caso_full/.
